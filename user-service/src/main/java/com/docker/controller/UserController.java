@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/app/user")
 public class UserController {
@@ -19,7 +20,12 @@ public class UserController {
         return new ResponseEntity<>(userServ.getAllUser(), HttpStatus.OK);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/login")
+    public ResponseEntity<?> checkUser(@RequestBody User user){
+        return new ResponseEntity<>(userServ.checkUser(user.getEmail(),user.getPassword()), HttpStatus.OK);
+    }
+
+    @PostMapping("/register")
     public ResponseEntity<?> addUser(@RequestBody User user){
         return new ResponseEntity<>(userServ.addUser(user), HttpStatus.OK);
     }
