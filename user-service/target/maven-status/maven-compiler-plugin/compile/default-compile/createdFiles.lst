@@ -1,0 +1,6 @@
+com\docker\service\UserServiceImpl.class
+com\docker\model\User.class
+com\docker\UserServiceApplication.class
+com\docker\repository\UserRepository.class
+com\docker\service\UserService.class
+com\docker\controller\UserController.class

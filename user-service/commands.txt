@@ -1,0 +1,17 @@
+Steps:
+
+ 1. open terminal
+ 2. command to run : docker-compose up
+ 3. springboot and mySQL container will run
+ 4. open another termainal to access mySQL db
+ 5. give command : winpty docker exec -it <mysql_container> bash
+ 6. log in to mySQL : mysql -u root -p
+ 7. password: ankit
+ 8. api's
+    Get : http://localhost:8084/app/user/get
+    Post: http://localhost:8084/app/user/add
+    Post: http://localhost:8084/app/user/update/{emailId}
+    Delete: http://localhost:8084/app/user/remove/{emailId}
+
+    
+    
